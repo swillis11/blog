@@ -44,7 +44,7 @@ if($_SESSION['loggedin']==true && $_SESSION['userid']=$row['uid']){
         echo "Add a tag below.";  
     
     ?>
-    
+    <!--Git works-->
     <form action='addtag.php?pid=<?echo $pid;?>' method='POST'>
 
 	<ul>	
