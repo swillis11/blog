@@ -1,0 +1,222 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*Link Styling*/
+a, a:active, a:visited { 
+	color: #0090e2;
+	text-decoration: none;
+}
+a:hover {
+	color: #006599;
+	text-decoration: none;
+}
+
+/*Page Layout*/
+body {
+
+}
+#wrapper {
+    width: 900px;
+    margin: auto;
+    margin-top: 30px;
+}
+#header {
+    float: left;
+    width: 600px;
+    height: 150px;
+    
+}
+#login {
+    width: 300px;
+    float: right;
+}
+
+#main {
+    clear: left;
+    float: left;
+    width: 600px;
+    border-right: 1px dotted #cccccc;
+    padding-right: 25px;
+}
+
+/*---------Below is a good example of nesting with CSS. For example, "archive ul li ul li" selects the first <ul> in the <div id='archive'>, then it selects the <li> tag that's in the <ul> tag that's inside the <li> tag. That last part was from the bottom up. You probably understood it once you read "nested" so that whole thing was really unnecessary. LOL ^L^-----*/
+
+#archive {
+	float: right;
+	clear: left;
+	width: 240px;
+
+}
+#archive ul li {
+	font-size: 16px;
+	color: #444444;
+}
+#archive ul li ul {
+	margin-bottom: 15px;
+}
+#archive ul li ul li {
+	font-size: 13px;
+	margin-left: 5px;
+}
+#archive h3 {
+	font-size: 20px;
+	font-family: DroidSerif, Helvetica, Arial, serif;
+	margin-bottom: 20px;
+}
+
+/*Text Formatting  EDIT: Not anymore, I got lazy because it's 1AM now so there may be formatting above for text*/
+@font-face { font-family: DroidSerif-Bold; src: url('../fonts/DroidSerif-Bold.ttf'); }
+@font-face { font-family: DroidSerif; src: url('../fonts/DroidSerif-Regular.ttf'); }
+
+p, #main li {
+	font-size: 16px;
+	line-height: 22px;
+	font-family: "Gill Sans";
+	color: #333333;
+}
+.postauthor {
+	margin-bottom: 20px;
+	font-style: italic;
+	color: #555555;
+}
+
+h1 {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 40px;
+}
+h2 {
+	font-family: DroidSerif-Bold, serif;
+	font-size: 30px;
+	margin-bottom: 16px;
+}
+
+.post {
+	margin-bottom: 30px;
+	padding-bottom: 30px;
+	border-bottom: 1px dashed #cccccc;
+	width: 600px;
+	overflow: hidden;
+}
+.comments {
+	margin-top: 20px;
+	color: #666666;
+	font-style: italic;
+/*	float: left;*/
+}
+.readmore {
+	float: right;
+	margin-top: 20px;
+	font-style: italic;
+}
+.warningtext {
+    color: red;
+}
+textarea#body {
+    width: 600px;
+    height: 120px;
+    padding: 5px;
+    /*border: 3px solid #cccccc;*/
+}
+ul {
+    list-style-type: none;
+}
+#newpost {
+	width: 110px;
+	height: 28px;
+	float: left;
+        margin-right: 5px;
+}
+#loginsettings {
+	float: left;
+	/*margin-left: 5px;*/
+}
+#loginsettings ul {
+	width: 110px;
+	list-style: none;
+	background-image: url('../images/login/settings.png');
+	background-repeat: no-repeat;
+	height: 28px;
+	font-family: Helvetica, Arial, sans-serif;
+}
+#loginsettings li {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+	float: left;
+	position: relative;
+	z-index: 9999;
+}
+#loginsettings ul ul {
+	position: absolute;
+	margin-top: 28px;
+	padding-left: 0px;
+	visibility: hidden;
+	background-image: url('../images/login/drop_background.png');
+	background-repeat: no-repeat;
+	height: 104px;
+}
+#loginsettings ul ul li a {
+	display: block;
+	width: 110px;
+	height: 25px;
+	margin-left: 1px;
+	padding: 5px 5px 5px 5px;
+	font-weight: bold;
+	color: #545454;
+	font-size: 12px;
+	text-align: left;
+	text-decoration: none;
+}
+#loginsettings ul ul li a:hover {
+	color: #eeeeee;
+	background-image: url('../images/login/hover_background.png');
+	background-repeat: no-repeat;
+}
+#loginsettings ul:hover ul {
+	position: absolute;
+	visibility: visible;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
